@@ -1,18 +1,16 @@
-import tensorflow as tf
 import json
 import pathlib
 import os
 import cv2
 from sklearn.model_selection import train_test_split
 import numpy as np
-from tensorflow.keras.layers import Dense, LSTM, Reshape, BatchNormalization, Input, Conv2D, MaxPool2D, Lambda, Bidirectional, Add, Activation
+from tensorflow.keras.layers import Dense, LSTM, BatchNormalization, Input, Conv2D, MaxPool2D, Lambda, Bidirectional, Add, Activation
 from tensorflow.keras.models import Model
 import tensorflow.keras.backend as K
-from tensorflow.keras.callbacks import CSVLogger, TensorBoard, ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 
-DATA_PATH = 'E:\\matkhau\\trituenhantao\\thucHanh\\doan\\data\\data2'
-TRAIN_JSON = 'E:\\matkhau\\trituenhantao\\thucHanh\\doan\\data\\labels.json'
-RAW_FOLDER = 'E:\\matkhau\\trituenhantao\\thucHanh\\doan\\data\\data'
+DATA_PATH = 'data\\data2'
+TRAIN_JSON = 'data\\labels.json'
+RAW_FOLDER = 'data\\data'
 
 with open(TRAIN_JSON,'r', encoding='utf8') as f:
     train_labels = json.load(f)
