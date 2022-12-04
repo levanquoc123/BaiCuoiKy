@@ -1,9 +1,9 @@
 from tensorflow.keras.models import model_from_json
 from tensorflow import keras
-import cv2
 from pyexpat import model
 import streamlit as st
 import numpy as np
+import cv2
 
 model_config = "data1/digit_config.json"
 model_weight = "data1/digit_weight.h5"
