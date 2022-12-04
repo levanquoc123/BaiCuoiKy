@@ -4,8 +4,7 @@ from random import sample
 if __name__ == "__main__":
     import streamlit as st
 
-    st.write("# Welcome to Streamlit! 👋")
-    st.sidebar.success("Select a demo above.")
+    st.write("# Xin Chào Bạn Đến Với Web QuốcTrí! 👋")
     st.markdown(
         """
         Streamlit is an open-source app framework built specifically for
